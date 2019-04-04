@@ -1,6 +1,6 @@
-#Commands for SSH Keys
+# Commands for SSH Keys
 
-#setup ssh keys
+## setup ssh keys
 ```bash
 ssh-keygen
 ```
