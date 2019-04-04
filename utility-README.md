@@ -1,4 +1,4 @@
-# Commands for Utility (commands an SA would use)
+# commands for utility (commands a redhat sa would use)
 
 ### search for word in a file
 ```bash

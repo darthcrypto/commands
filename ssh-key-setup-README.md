@@ -1,18 +1,18 @@
-# Commands for SSH Keys
+# commands for ssh key setup
 
-## 1) create ssh key pair (for this example, keys were named vf18 and vf18.pub)
+### 1) create ssh key pair (for this example, keys were named vf18 and vf18.pub)
 ```bash
 ssh-keygen
 ```
 
-## 2) ensure /etc/hosts has correct aliases
+### 2) ensure /etc/hosts has correct aliases
 ```bash
 192.168.56.101 v1
 192.168.56.102 v2
 192.168.56.103 v3
 ```
 
-## 3) add contents to ~/.ssh/config (the private key is the identity file)
+### 3) add contents to ~/.ssh/config (the private key is the identity file)
 ```bash
 Host v1
 User root
@@ -30,23 +30,23 @@ IdentityFile ~/.ssh/vf18
 Port 22
 ```
 
-## 4) change permissions
+### 4) change permissions
 ```bash
 chmod 700 .ssh
 chmod 600 authorized_keys
 ```
 
-## 5) on redhat systems activate the ssh shell
+### 5) on redhat systems activate the ssh shell
 ```bash
 ssh-agent $SHELL
 ```
 
-## 6) add private key as identity file, adds passphrase to mac key manager....
+### 6) add private key as identity file, adds passphrase to mac key manager....
 ```bash
 ssh-add ~/.ssh/vf18
 ```
 
-## 7) test functionality with for loop
+### 7) test functionality with for loop
 ```bash
 for i in v{1..3};do ssh -qex -t $i 'echo "";date;hostname;yum -y update;init 6';done
 ```
