@@ -51,8 +51,3 @@ ssh-add ~/.ssh/vf18
 for i in v{1..3};do ssh -qex -t $i 'echo "";date;hostname;yum -y update;init 6';done
 ```
 
-#verify your gitlab login
-ssh -T git@gitlab.com
-
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
