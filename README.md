@@ -1,12 +1,11 @@
 # Commands for SSH Keys
 
-## setup ssh keys
-1) create ssh key pair (for this example, keys were named vf18 and vf18.pub)
+## 1) create ssh key pair (for this example, keys were named vf18 and vf18.pub)
 ```bash
 ssh-keygen
 ```
 
-2) ensure /etc/hosts has correct aliases
+## 2) ensure /etc/hosts has correct aliases
 ```bash
 192.168.56.101 v1
 192.168.56.102 v2
