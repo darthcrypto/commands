@@ -36,7 +36,7 @@ chmod 700 .ssh
 chmod 600 authorized_keys
 ```
 
-## 5) on redhat systems activatge the ssh shell
+## 5) on redhat systems activate the ssh shell
 ```bash
 ssh-agent $SHELL
 ```
