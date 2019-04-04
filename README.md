@@ -1,14 +1,15 @@
 # Commands for SSH Keys
 
 ## setup ssh keys
+1) create ssh key pair
 ```bash
 ssh-keygen
 ```
 
+2) ensure /etc/hosts has correct aliases
 
-#ensure /etc/hosts has correct aliases
-
-#add contents to ~/.ssh/config:
+3) add contents to ~/.ssh/config
+```bash
 Host v1
 User root
 IdentityFile ~/.ssh/vf18
@@ -18,9 +19,13 @@ Host v2
 User root
 IdentityFile ~/.ssh/vf18
 Port 22
+```
 
-#chmod 700 .ssh
-#chmod 600 authorized_keys
+4) change permissions
+```bash
+chmod 700 .ssh
+chmod 600 authorized_keys
+```
 
 #use on redhat....
 ssh-agent $SHELL
