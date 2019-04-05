@@ -1,8 +1,13 @@
 # commands for utility (commands a redhat sa would use)
 
-### search for word in a file
+### search for word in a file, get line number
 ```bash
 grep -rnw -e "word"
+```
+
+### quick search, ignore capitalization
+```bash
+grep -i selinux /var/log/messages
 ```
 
 ### loop/error check/variables
