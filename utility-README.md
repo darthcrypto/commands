@@ -37,3 +37,8 @@ systemctl list-unit-files --type=service
 ifup eth1
 ifdown eth1
 ```
+
+### examine network ports and user
+```bash
+lsof -Pni | grep zookeeper
+```
