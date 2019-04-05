@@ -26,3 +26,9 @@ done
 ```bash
 systemctl list-unit-files --type=service
 ```
+
+### activate interfaces
+```bash
+ifup eth1
+ifdown eth1
+```
