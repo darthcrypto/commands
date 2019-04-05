@@ -16,3 +16,9 @@ ssh -T git@gitlab.com
 git config --global user.email "you@example.com" 
 git config --global user.name "Your Name"
 ```
+
+### troubleshooting "can't sign errors"
+```bash
+export GPG_TTY=$(tty)
+echo $GPG_TTY
+```

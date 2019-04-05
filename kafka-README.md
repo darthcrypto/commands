@@ -15,6 +15,11 @@ https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-
 bin/kafka-topics.sh --create --zookeeper kafka1:2181,kafka2:2181,kafka3:2181 --replication-factor 1 --partitions 6 --topic topic1 --config cleanup.policy=delete --config delete.retention.ms=60000
 ```
 
+### describe topic 
+```bash 
+bin/kafka-topics.sh --zookeeper kafka2:2181 --describe --topic topic2
+```
+
 ### list topics
 ```bash
 kafka-topics --zookeeper zookeeper1:2181 --list
