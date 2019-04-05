@@ -21,3 +21,8 @@ for i in $dnlist; do
         fi
 done
 ```
+
+### list all service units and whether they are activated at boot
+```bash
+systemctl list-unit-files --type=service
+```
