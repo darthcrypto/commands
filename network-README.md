@@ -1,5 +1,11 @@
 # commands for network
 
+### activate interfaces
+```bash
+ifup eth1
+ifdown eth1
+```
+
 ### create a static route to 192.168.123.123
 1) create file /etc/sysconfig/network-scripts/route-enp0s8
 ```bash

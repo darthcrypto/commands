@@ -32,12 +32,6 @@ done
 systemctl list-unit-files --type=service
 ```
 
-### activate interfaces
-```bash
-ifup eth1
-ifdown eth1
-```
-
 ### examine network ports and user
 ```bash
 lsof -Pni | grep zookeeper
