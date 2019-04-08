@@ -32,3 +32,8 @@ ls /brokers/ids
 ls /brokers/topics/topic1
 ls /brokers/topics/topic/partitions
 ```
+
+### re-balance cluster by forcing an election among the brokers for the primary replica
+```bash
+sudo kafka-preferred-replica-election --zookeeper kafka3:2181
+```
