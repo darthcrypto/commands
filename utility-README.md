@@ -42,3 +42,31 @@ ifdown eth1
 ```bash
 lsof -Pni | grep zookeeper
 ```
+
+### script with common loops,variables,cut
+```bash
+#!/bin/bash
+
+if [ $# -gt 1 ]; then
+  echo "Error: too many arguments"
+  exit 1
+fi
+
+if [ $# -eq 0 ]; then
+  username=$USER
+else
+  username=$1
+fi
+
+userinfo=$(getent passwd $username)
+
+if [ $? -ne 0 ]; then
+  echo "Error: cannot retrieve information for user $username"
+  exit 2
+fi
+
+usershell=$(echo $userinfo | cut -f 7 -d ":")
+
+echo "$username's shell is $usershell"
+exit 0
+```
