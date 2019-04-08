@@ -37,3 +37,13 @@ ls /brokers/topics/topic/partitions
 ```bash
 sudo kafka-preferred-replica-election --zookeeper kafka3:2181
 ```
+
+### populate topic with data
+```bash
+seq 99 | /opt/kafka_2.12-2.2.0/bin/kafka-console-producer.sh --request-required-acks 1 --broker-list kafka1:9092 --topic numbers
+```
+
+### view live data
+```bash
+./kafka-console-consumer.sh --bootstrap-server kafka2:9092 --topic numbers --from-beginning --max-messages 99
+```
