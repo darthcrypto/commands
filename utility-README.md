@@ -64,3 +64,13 @@ usershell=$(echo $userinfo | cut -f 7 -d ":")
 echo "$username's shell is $usershell"
 exit 0
 ```
+
+### create md5 checksum of file and place checksums into file
+```bash
+md5sum test.txt > checksum.txt
+```
+
+### check the md5 checksums placed in the file for any modifications
+```bash
+md5sum -c checksum.txt
+```
