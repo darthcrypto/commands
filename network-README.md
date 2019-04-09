@@ -16,3 +16,8 @@ ifdown eth1
 ```bash
 service network restart
 ```
+
+### view interface statistics
+```bash
+ip -s link
+```
