@@ -74,3 +74,23 @@ md5sum test.txt > checksum.txt
 ```bash
 md5sum -c checksum.txt
 ```
+
+### if loop to test if file exists
+```bash
+#!/bin/bash
+
+if [ -f /tmp/test.txt ]; then
+  echo "test passed"
+else
+  echo "test failed"
+fi
+```
+
+### for loop to go through users on system
+```bash
+#!/bin/bash
+
+for i in $(getent passwd | cut -f 1 -d ":"); do
+  echo "$i is a great user"
+done
+```
