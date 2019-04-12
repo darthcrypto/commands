@@ -15,3 +15,8 @@ restorecon -R /www
 chcon -u system_u file1
 ```
 
+### change an seboolean and persist the change
+```bash
+setsebool -P httpd_enable_homedirs 1
+```
+
