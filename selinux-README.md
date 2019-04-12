@@ -20,3 +20,12 @@ chcon -u system_u file1
 setsebool -P httpd_enable_homedirs 1
 ```
 
+### list audit messages in SELINUX
+```bash
+grep -i avc /var/log/messages
+```
+
+### accompanies avc search via  UI
+```bash
+sealeart -a /var/log/audit/audit.log
+```
