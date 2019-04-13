@@ -94,3 +94,9 @@ for i in $(getent passwd | cut -f 1 -d ":"); do
   echo "$i is a great user"
 done
 ```
+
+### to find out where a command comes from in yum
+```bash
+yum provides semanage
+```
+
