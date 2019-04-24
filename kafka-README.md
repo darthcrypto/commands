@@ -47,3 +47,16 @@ seq 99 | /opt/kafka_2.12-2.2.0/bin/kafka-console-producer.sh --request-required-
 ```bash
 ./kafka-console-consumer.sh --bootstrap-server kafka2:9092 --topic numbers --from-beginning --max-messages 99
 ```
+
+
+###The following command line sends 10 million messages, 100 bytes in size, at a rate of 1000 messages/sec. The producer-props environment variable defines interceptors that enable stream monitoring in Control Center.
+```bash
+NS=io.confluent.monitoring.clients.interceptor && \ kafka-producer-perf-test \
+        --topic i-love-logs \
+        --num-records 10000000 \
+        --record-size 100 \
+        --throughput 1000 \
+        --producer-props \
+            bootstrap.servers=kafka-1:9092,kafka-2:9092 \
+            interceptor.classes=${NS}.MonitoringProducerInterceptor
+```
