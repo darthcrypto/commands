@@ -100,3 +100,7 @@ done
 yum provides semanage
 ```
 
+### send email from command line
+```bash
+echo -e "Subject: History of the World Volume 2 \n\n It all began in 1997." | sendmail -v root@localhost
+```
