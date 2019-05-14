@@ -104,3 +104,27 @@ yum provides semanage
 ```bash
 echo -e "Subject: History of the World Volume 2 \n\n It all began in 1997." | sendmail -v root@localhost
 ```
+
+### config file for secure apache
+```bash
+<Directory "/www/docs/big.dev.net/cubs">
+    AuthType Basic
+    AuthName "By Invitation Only"
+    # Optional line:
+    AuthBasicProvider file
+    AuthUserFile /etc/httpd/passwd/passwords
+    AuthGroupFile /etc/httpd/passwd/groups
+    <RequireAll>
+    Require group Cubs
+    Require ip 192.168.56.104
+    </RequireAll>
+</Directory>
+
+<VirtualHost *:80>
+  ServerAdmin webmaster@big.dev.net
+  DocumentRoot /www/docs/big.dev.net
+  ServerName big.dev.net
+  ErrorLog logs/big.dev.net-error_log
+  TransferLog logs/big.dev.net-access_log
+</VirtualHost>
+```
