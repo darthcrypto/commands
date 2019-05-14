@@ -128,3 +128,10 @@ echo -e "Subject: History of the World Volume 2 \n\n It all began in 1997." | se
   TransferLog logs/big.dev.net-access_log
 </VirtualHost>
 ```
+
+### rhce postfix steps
+```bash
+1) setup postfix server (5 mys, 1 extra)
+2) setup postfix null client (5 mys, 3 extra)
+3) test with sendmail account to fred@dev.net
+```
