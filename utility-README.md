@@ -135,3 +135,19 @@ echo -e "Subject: History of the World Volume 2 \n\n It all began in 1997." | se
 2) setup postfix null client (5 mys, 3 extra)
 3) test with sendmail account to fred@dev.net
 ```
+
+### rpm gpg keys
+list rpm gpg keys:
+```bash
+rpm -q gpg-pubkey
+```bash
+
+remove an rpm gpg key:
+```bash
+rpm -e gpg-pubkey-f4a80eb5-53a7ff4b
+```bash
+
+add an rpm gpg key:
+```bash
+rpm --import RPM-GPG-KEY-CentOS-7
+```
