@@ -60,3 +60,34 @@ NS=io.confluent.monitoring.clients.interceptor && \ kafka-producer-perf-test \
             bootstrap.servers=kafka-1:9092,kafka-2:9092 \
             interceptor.classes=${NS}.MonitoringProducerInterceptor
 ```
+
+# getting kafka connect up and running
+
+### resources
+```bash
+https://docs.confluent.io/current/connect/managing/confluent-hub/command-reference/confluent-hub-install.html
+
+https://docs.confluent.io/current/connect/kafka-connect-syslog/index.html
+
+https://docs.confluent.io/current/quickstart/cos-quickstart.html#cos-quickstart
+```
+
+###install kafka confluent on a node
+```bash
+cd /opt
+tar xvf confluent-5.2.1-2.12.tar.gz
+```
+
+###install confluent hub client
+```bash
+https://docs.confluent.io/current/connect/managing/confluent-hub/client.html
+
+tar xvf confluent-hub-client-latest.tar.gz
+
+./bin/confluent-hub <enter rest of command here>
+```
+
+### installing kafka syslog connect
+```bash
+./bin/confluent-hub install confluentinc/kafka-connect-syslog:latest --component-dir /opt/confluent-5.2.1/share/confluent-hub-components --worker-configs /opt/confluent-5.2.1/etc/kafka/connect-standalone.properties
+```
