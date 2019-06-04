@@ -91,3 +91,10 @@ tar xvf confluent-hub-client-latest.tar.gz
 ```bash
 ./bin/confluent-hub install confluentinc/kafka-connect-syslog:latest --component-dir /opt/confluent-5.2.1/share/confluent-hub-components --worker-configs /opt/confluent-5.2.1/etc/kafka/connect-standalone.properties
 ```
+
+# kafka health check
+
+###describe a topic
+```bash
+./kafka-topics.sh --describe --zookeeper kafka1:2181 --topic syslogtest
+```
