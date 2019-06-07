@@ -47,3 +47,10 @@ sample snip of network interface:
 BOOTPROTO=none
 TYPE=Ethernet
 ```
+
+### to work on the command line, need single quotes rather than double quotes:
+```bash
+change space_left to 3866:
+sed -i '/#/!s/^\(space_left[[:space:]]*=[[:space:]]*\)\(.*\)/\13866/' /etc/audit/auditd.conf
+```
+
