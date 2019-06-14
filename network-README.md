@@ -46,3 +46,11 @@ service network restart
 ```bash
 ip -s link
 ```
+
+# nmcli
+
+### modify an interface
+```bash
+nmcli con mod enp0s3 ipv4.addresses "192.168.56.101/24"
+```
+
