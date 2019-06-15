@@ -62,3 +62,7 @@ ip a
 mcli con down "Wired connection 1"
 ```
 
+###delete an ip address from an interface
+```bash
+ip addr del 192.168.56.130/24 dev Team1
+```
