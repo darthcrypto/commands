@@ -52,5 +52,8 @@ ip -s link
 ### modify an interface
 ```bash
 nmcli con mod enp0s3 ipv4.addresses "192.168.56.101/24"
+nmcli con down enp0s3
+nmcli con up enp0s3
+ip a
 ```
 
