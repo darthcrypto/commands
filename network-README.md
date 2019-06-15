@@ -57,3 +57,8 @@ nmcli con up enp0s3
 ip a
 ```
 
+### take down network connections by name"
+```bash
+mcli con down "Wired connection 1"
+```
+
