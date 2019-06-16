@@ -66,3 +66,22 @@ mcli con down "Wired connection 1"
 ```bash
 ip addr del 192.168.56.130/24 dev Team1
 ```
+
+###set promisc mode on interface
+```bash
+ip link set dev enp0s8 promisc on 
+```
+
+### steps fro setting up static Team interface with nmcli
+```bash
+nmcli con add type team con-name Team1 ifname Team1 config /root/team.conf
+nmcli con mod Team1 ipv4.addresses "192.168.56.110/24"
+nmcli con mod Team1 ipv4.method manual
+nmcli con add type team-slave con-name Team1-slave1 ifname enp0s8 master Team1
+nmcli con add type team-slave con-name Team1-slave2 ifname enp0s9 master Team1
+nmcli con up Team1
+```
+
+
+
+
