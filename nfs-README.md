@@ -15,7 +15,7 @@ firewall-cmd --permanent --zone=public --add-rich-rule="rule family=ipv4 source 
 config exports file (see below)
 vi /etc/sysconfig/nfs     RPCNFSDARGS="-V 4.2"
 systemctl restart nfs
-systemctl start nfs-secure; systemctl enable nfs-secure
+systemctl start nfs-secure-server; systemctl enable nfs-secure-server
 exportfs -rv
 selinux the shared folders
 ```
