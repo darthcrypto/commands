@@ -82,6 +82,9 @@ nmcli con add type team-slave con-name Team1-slave2 ifname enp0s9 master Team1
 nmcli con up Team1
 ```
 
-
+### man page for team runners
+```bash
+man teamd.conf
+```
 
 
