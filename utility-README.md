@@ -175,3 +175,14 @@ rpm --import RPM-GPG-KEY-CentOS-7
   TransferLog logs/big.dev.net-access_log
 </VirtualHost>
 ```
+
+
+### checking a postfix mail queue
+```bash
+postqueue -p
+```
+
+### flushing a postfix mail queue
+```bash
+postqueue -f
+```
